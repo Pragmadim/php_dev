@@ -1,0 +1,16 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="CommitChangeListDialog.DETAILS_SPLITTER_PROPORTION_2" value="0.7254623" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExpandRunDashboardTypesPanel" value="false" />
+    <property name="LayoutCode.optimizeImports" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="PhpStorm.InitialConfiguration" value="true" />
+    <property name="TrendingPluginsSearchHistory" value=".ignore&#10;git" />
+    <property name="evlsprt3.183" value="17" />
+    <property name="file.chooser.recent.files" value="D:/php-7.3.1-Win32-VC15-x64/php.exe" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="lastTip" value="9" />
+    <property name="ts.lib.d.ts.version" value="3.2.1" />
+  </component>
+</application>
