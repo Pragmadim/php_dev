@@ -1,16 +1,28 @@
 <?php
 
-function homoCredit($monthPay, $creditSum) {
-    $monthPercent = 0.03;
+function homoCredit($monthPay, $creditSum)
+{
+    $monthPercentSum = 1.03;
     $comission = 500;
-    $result = 0;
     $month = 1;
-    for($creditSum; $result<$creditSum; $month++ ) {
-        $result = $creditSum + ($creditSum * $monthPercent + $comission);
-        $creditSum = $result;
-        echo "$result, $month\n";
+    $debtSum = $creditSum * $monthPercentSum + $comission;
+    $result = 1;
+
+    for ($debtSum; $result > 0; $month++) {
+        echo "Месяц $month. Долг на начало месяца: $debtSum. ";
+        $result = $debtSum - $monthPay; /** Долг с процентом в этом месяце */
+        $debtSum = $result * $monthPercentSum + $comission;
+        if ($debtSum <= 0) {
+            $moneyLeft = $monthPay + $result;
+            echo "Долг будет выплачен к концу месяца! Денег осталось: $moneyLeft";
+            break;
+        }
+        echo "Сумма долга с процентом $result. Плотим 5 тыщ. \n";
+
     }
-    /** БЛЯЯЯЯЯЯЯЯЯЯЯ */
+
+    echo "Итого выплачено: $monthPay * $month - $moneyLeft";
+
 }
 
 homoCredit(5000, 40000);
