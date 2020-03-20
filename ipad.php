@@ -11,9 +11,10 @@ function homoCredit($monthPay, $creditSum)
     for ($debtSum; $result > 0; $month++) {
         echo "Месяц $month. Долг на начало месяца: $debtSum. ";
         $result = $debtSum - $monthPay; /** Долг с процентом в этом месяце */
+        $calc = $result;
         $debtSum = $result * $monthPercentSum + $comission;
         if ($debtSum <= 0) {
-            $moneyLeft = $monthPay + $result;
+            $moneyLeft = $monthPay - $calc;
             echo "Долг будет выплачен к концу месяца! Денег осталось: $moneyLeft";
             break;
         }
